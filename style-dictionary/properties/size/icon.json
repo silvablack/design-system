@@ -1,0 +1,11 @@
+{
+  "size": {
+    "icon": {
+      "sm"     : { "value":"1"   },
+      "base"   : { "value":"1.5" },
+      "lg"     : { "value":"2"   },
+      "x-lg"   : { "value":"2.5"   },
+      "xx-lg"  : { "value":"3" }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "size": {
+    "font": {
+      "x-sm"        : { "value": "0.625" },
+      "sm"          : { "value": "0.8125" },
+      "md"          : { "value": "1" },
+      "lg"          : { "value": "1.25" },
+      "x-lg"        : { "value": "1.5" },
+      "xx-lg"       : { "value": "2" },
+      "xxx-lg"      : { "value": "2,5" },
+      "display-2"   : { "value": "3"},
+      "display-1"   : { "value": "4"},
+      "base"        : { "value": "{size.font.md.value}" }
+    }
+  }
+}

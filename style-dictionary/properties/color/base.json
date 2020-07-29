@@ -1,0 +1,32 @@
+{
+  "color": {
+    "base": {
+      "blue": {
+        "lighter" : { "value": "#E5F7FF", "attributes": {"font": "info"}},
+        "light"   : { "value": "#B8E8FF", "attributes": {"font": "inverse"}},
+        "base"    : { "value": "#0095DA", "attributes": {"font": "inverse"}},
+        "dark"    : { "value": "#0070A3", "attributes": {"font": "inverse"}},
+        "darker"  : { "value": "#004D70", "attributes": {"font": "inverse"}}
+      },
+      "gray": {
+        "1"       : { "value": "#787B7D", "attributes": {"font": "inverse"}},
+        "2"       : { "value": "#C7CCCF", "attributes": {"font": "base"}},
+        "3"       : { "value": "#F2F5F7", "attributes": {"font": "base"}}
+      },
+      "green": {
+        "light"   : { "value": "#D4FFE8", "attributes": {"font": "sucess"}},
+        "base"    : { "value": "#03823C", "attributes": {"font": "inverse"}}
+      },
+      "yellow": {
+        "light"   : { "value": "#FFF4D4", "attributes": {"font": "warning"}},
+        "base"    : { "value": "#B28604", "attributes": {"font": "inverse"}}
+      },
+      "red": {
+        "light"   : { "value": "#FFD5D3", "attributes": {"font": "error"}},
+        "base"    : { "value": "#B20B04", "attributes": {"font": "inverse"}}
+      },
+      "white"     : { "value": "#FFFFFF" },
+      "black"     : { "value": "#262626" }
+    }
+  }
+}

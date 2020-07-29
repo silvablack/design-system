@@ -1,0 +1,23 @@
+{
+  "asset": {
+    "font": {
+      "inter-regular": {
+        "name" : { "value": "Inter-Regular" },
+        "ttf"  : { "value": "assets/fonts/Inter-Regular.ttf" }
+      },
+      "inter-medium": {
+        "name" : { "value": "Inter-Medium" },
+        "ttf"  : { "value": "assets/fonts/Inter-Medium.ttf" }
+      },
+      "inter-semibold": {
+        "name" : { "value": "Inter-Semibold" },
+        "ttf"  : { "value": "assets/fonts/Inter-Semibold.ttf" }
+      },
+      "inter-bold": {
+        "name" : { "value": "Inter-Bold" },
+        "ttf"  : { "value": "assets/fonts/Inter-Bold.ttf" }
+      }
+    }
+  }
+}
+

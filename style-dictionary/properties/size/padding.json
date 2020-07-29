@@ -1,0 +1,13 @@
+{
+  "size": {
+    "padding": {
+      "x-sm"     : { "value": "0.25" },
+      "sm"       : { "value": "0.5" },
+      "md"       : { "value": "1" },
+      "lg"       : { "value": "1.5" },
+      "x-lg"     : { "value": "2" },
+      "xx-lg"    : { "value": "3" },
+      "base"     : { "value": "{size.padding.md.value}" }
+    }
+  }
+}

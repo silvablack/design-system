@@ -1,0 +1,9 @@
+{
+  "font": {
+    "family": {
+      "base": {
+        "value": "{asset.font.inter-regular.name.value}"
+      }
+    }
+  }
+}
