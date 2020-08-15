@@ -12,19 +12,19 @@ Theo is an abstraction for transforming and formatting [Design Tokens](#overview
 ## Example
 
 ```yaml
-# buttons.yml
+# _buttons.yml
 props:
   button_background:
     value: "{!primary_color}"
 imports:
-  - ./aliases.yml
+  - ./_aliases.yml
 global:
   type: color
   category: buttons
 ```
 
 ```yaml
-# aliases.yml
+# _aliases.yml
 aliases:
   primary_color:
     value: "#0070d2"
@@ -37,16 +37,16 @@ theo
   .convert({
     transform: {
       type: "web",
-      file: "buttons.yml"
+      file: "_buttons.yml",
     },
     format: {
-      type: "scss"
-    }
+      type: "scss",
+    },
   })
-  .then(scss => {
+  .then((scss) => {
     // $button-background: rgb(0, 112, 210);
   })
-  .catch(error => console.log(`Something went wrong: ${error}`));
+  .catch((error) => console.log(`Something went wrong: ${error}`));
 ```
 
 ## Transforms
@@ -93,9 +93,9 @@ theo.registerValueTransform(
   "easing/web",
   // Determine if the value transform
   // should be run on the specified prop
-  prop => prop.get("type") === "easing",
+  (prop) => prop.get("type") === "easing",
   // Return the new value
-  prop => {
+  (prop) => {
     const [x1, y1, x2, y2] = prop.get("value").toArray();
     return `cubic-bezier(${x1}, ${y1}, ${x2}, ${y2})`;
   }
@@ -192,7 +192,7 @@ export const propName = "PROP_VALUE";
 ```js
 module.exports = {
   // If prop has 'comment' key, that value will go here.
-  propName: "PROP_VALUE"
+  propName: "PROP_VALUE",
 };
 ```
 
@@ -206,8 +206,8 @@ module.exports = {
 let formatOptions = {
   type: "html",
   options: {
-    transformPropName: name => name.toUpperCase()
-  }
+    transformPropName: (name) => name.toUpperCase(),
+  },
 };
 ```
 
@@ -263,9 +263,9 @@ Tokens are grouped by category then categories are conditionally rendered under 
     PROP_NAME: {
       value: "PROP_VALUE",
       type: "PROP_TYPE",
-      category: "PROP_CATEGORY"
-    }
-  }
+      category: "PROP_CATEGORY",
+    },
+  },
 }
 ```
 
@@ -278,9 +278,9 @@ Tokens are grouped by category then categories are conditionally rendered under 
       name: "propName",
       value: "PROP_VALUE",
       type: "PROP_TYPE",
-      category: "PROP_CATEGORY"
-    }
-  ]
+      category: "PROP_CATEGORY",
+    },
+  ],
 }
 ```
 
@@ -336,7 +336,7 @@ const camelCase = require("lodash/camelCase");
 const path = require("path");
 const theo = require("theo");
 
-theo.registerFormat("array.js", result => {
+theo.registerFormat("array.js", (result) => {
   // "result" is an Immutable.Map
   // https://facebook.github.io/immutable-js/
   return `
@@ -345,7 +345,7 @@ theo.registerFormat("array.js", result => {
       ${result
         .get("props")
         .map(
-          prop => `
+          (prop) => `
         ['${camelCase(prop.get("name"))}', '${prop.get("value")}'],
       `
         )
@@ -472,9 +472,9 @@ or [YAML](http://yaml.org/) and should conform to the following spec:
       // but excluded during formatting
       meta: {
         // This value might be needed for some special transform
-        foo: "bar"
-      }
-    }
+        foo: "bar",
+      },
+    },
   },
 
   // Optional
@@ -483,10 +483,10 @@ or [YAML](http://yaml.org/) and should conform to the following spec:
   props: [
     {
       // Required
-      name: "color_brand"
+      name: "color_brand",
 
       // All other properties same as above
-    }
+    },
   ],
 
   // Optional
@@ -495,8 +495,8 @@ or [YAML](http://yaml.org/) and should conform to the following spec:
   global: {
     category: "some-category",
     meta: {
-      foo: "baz"
-    }
+      foo: "baz",
+    },
   },
 
   // Optional
@@ -506,8 +506,8 @@ or [YAML](http://yaml.org/) and should conform to the following spec:
     sky: "blue",
     grass: {
       value: "green",
-      yourMetadata: "How grass looks"
-    }
+      yourMetadata: "How grass looks",
+    },
   },
 
   // Optional
@@ -523,8 +523,8 @@ or [YAML](http://yaml.org/) and should conform to the following spec:
     // Relative file path: resolves from the directory of the file where the import occurs
     "./some/dir/file.json",
     // Module path
-    "some-node-module"
-  ]
+    "some-node-module",
+  ],
 }
 ```
 

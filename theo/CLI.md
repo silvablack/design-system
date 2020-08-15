@@ -61,7 +61,7 @@ Typically usage is within [npm scripts](https://docs.npmjs.com/misc/scripts):
 ```json
 {
   "scripts": {
-    "build": "theo tokens.yml --format scss,cssmodules.css --dest ."
+    "build": "theo _buttons.yml --format scss,cssmodules.css --dest ."
   }
 }
 ```

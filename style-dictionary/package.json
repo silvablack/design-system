@@ -6,10 +6,14 @@
   "scripts": {
     "build": "node_modules/.bin/style-dictionary build",
     "clean": "rm -rf build",
+    "start": "http-server ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "Apache-2.0",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
   "devDependencies": {
     "style-dictionary": "2.9.0"
   }

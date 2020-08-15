@@ -1,0 +1,16 @@
+global:
+  category: 'web'
+  type: 'size'
+  cssProperties:
+    - margin
+    - margin-top
+    - margin-bottom
+    - margin-left
+    - margin-right
+imports:
+  - ./_aliases.yml
+props:
+  medium:
+    value: '1rem'
+  large:
+    value: '2rem'
